@@ -17,7 +17,7 @@ jobs:
       - name: run-pmd
         run: |
           ls -la; ls -la ../
-          pmd -d . -failOnViolation false -f sarif -R rulesets/plsql/codesize.xml,rulesets/plsql/dates.xml,rulesets/plsql/strictsyntax.xml,rulesets/plsql/TomKytesDespair.xml > results.sarif
+          pmd -d plsql/ -failOnViolation false -f sarif -R rulesets/plsql/codesize.xml > results.sarif
           
           
       - name: Upload mobsfscan report
